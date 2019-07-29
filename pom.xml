@@ -22,7 +22,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<java.version>1.8</java.version>
 
-		<docker.image.prefix>lens.huygh@gmail.com</docker.image.prefix>
+		<docker.image.prefix>lenshuygh</docker.image.prefix>
 		<docker.image.name>springbootdocker</docker.image.name>
 	</properties>
 
@@ -58,13 +58,12 @@
 			<plugin>
 				<groupId>io.fabric8</groupId>
 				<artifactId>docker-maven-plugin</artifactId>
-				<version>0.20.0</version>
+				<version>0.30.0</version>
 				<configuration>
-					<!-- OSX
 					<dockerHost>unix:///var/run/docker.sock</dockerHost>
+					<!--<dockerHost>tcp://172.17.0.1:2375</dockerHost>
+					<dockerHost>tcp://0.0.0.0:2376</dockerHost>
 					-->
-					<dockerHost>http://127.0.0.1:2375</dockerHost>
-
 					<verbose>true</verbose>
 					<images>
 						<image>
